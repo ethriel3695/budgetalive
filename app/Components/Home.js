@@ -58,9 +58,9 @@ class Home extends React.Component {
     }
 
     componentDidMount () {
-        var defaultImage = document.getElementsByClassName('carouselImages pic0');
-        defaultImage[0].dataset.first = 1
-        this.updateImagesPosition(this.state.degreeVariation);
+        // var defaultImage = document.getElementsByClassName('carouselImages pic0');
+        // defaultImage[0].dataset.first = 1
+        // this.updateImagesPosition(this.state.degreeVariation);
     }
 
     componentWillReceiveProps() {
@@ -70,7 +70,7 @@ class Home extends React.Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        this.updateImagesPosition(0);
+        //this.updateImagesPosition(0);
     }
 
     changeBackground (image) {
@@ -103,11 +103,11 @@ class Home extends React.Component {
     }
 
     updateImagesPosition(currentPosition) {
-        var carouselObject = document.getElementsByClassName("carouselContainer");
-        carouselObject[0].style.transform = "rotateY(" + currentPosition + "deg)";
-        carouselObject[0].style.webkitTransform = "rotateY(" + currentPosition + "deg)";
-        carouselObject[0].style.mozTransform = "rotateY(" + currentPosition + "deg)";
-        carouselObject[0].style.oTransform = "rotateY(" + currentPosition + "deg)";
+        // var carouselObject = document.getElementsByClassName("carouselContainer");
+        // carouselObject[0].style.transform = "rotateY(" + currentPosition + "deg)";
+        // carouselObject[0].style.webkitTransform = "rotateY(" + currentPosition + "deg)";
+        // carouselObject[0].style.mozTransform = "rotateY(" + currentPosition + "deg)";
+        // carouselObject[0].style.oTransform = "rotateY(" + currentPosition + "deg)";
     }
 
     render() {
@@ -115,6 +115,7 @@ class Home extends React.Component {
             <div className='home-container'>
                 <h1 className='header'>{this.props.user.name}</h1>
                 <div className='imageContainer'>
+                {/*
                     <div className='carouselContainer'>
                     {this.props.user.images.map((image, index, front) => {
                         return (
@@ -135,6 +136,7 @@ class Home extends React.Component {
                         )
                     })}       
                     </div>
+                    */}
                     <i className="moveRight"
                         onClick={this.rotateImages}></i>
                     <i className="moveLeft"
