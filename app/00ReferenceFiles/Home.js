@@ -1,3 +1,4 @@
+/*
 var React = require('react');
 var Link = require('react-router-dom').Link;
 var api = require('../utilities/api.js');
@@ -7,12 +8,11 @@ var yDown = null;
 var direction = '';
 
 class Home extends React.Component {
-
-    constructor(props) {
+    constructor (props) {
         super(props);
         this.state = {
-            degreeVariation: 0
-        }
+            degreeVariation: 0,
+        };
 
         this.rotateImages = this.rotateImages.bind(this);
         this.updateImagesPosition = this.updateImagesPosition.bind(this);
@@ -47,9 +47,9 @@ class Home extends React.Component {
             }
         } else {
             if (yDiff > 0) {
-                //console.log('up');
+                // console.log('up');
             } else {
-                //console.log('down');
+                // console.log('down');
             }
         }
 
@@ -63,14 +63,14 @@ class Home extends React.Component {
         // this.updateImagesPosition(this.state.degreeVariation);
     }
 
-    componentWillReceiveProps() {
+    componentWillReceiveProps () {
         this.setState({
-            degreeVariation: 0
-        })
+            degreeVariation: 0,
+        });
     }
 
-    componentWillUpdate(nextProps, nextState) {
-        //this.updateImagesPosition(0);
+    componentWillUpdate (nextProps, nextState) {
+        // this.updateImagesPosition(0);
     }
 
     changeBackground (image) {
@@ -80,7 +80,7 @@ class Home extends React.Component {
         api.fetchPictaculousObject(actualImage);
     }
 
-    rotateImages(e) {
+    rotateImages (e) {
         var degreeModifier = 0;
         var classIdentifier = '';
         if (direction === '' || e !== undefined) {
@@ -91,8 +91,7 @@ class Home extends React.Component {
         }
         if (classIdentifier === 'moveLeft' || direction === 'left') {
             degreeModifier = 60;
-        }
-        else if (classIdentifier === 'moveRight' || direction === 'right') {
+        } else if (classIdentifier === 'moveRight' || direction === 'right') {
             degreeModifier = -60;
         }
         this.setState({
@@ -102,7 +101,7 @@ class Home extends React.Component {
         }.bind(this));
     }
 
-    updateImagesPosition(currentPosition) {
+    updateImagesPosition (currentPosition) {
         // var carouselObject = document.getElementsByClassName("carouselContainer");
         // carouselObject[0].style.transform = "rotateY(" + currentPosition + "deg)";
         // carouselObject[0].style.webkitTransform = "rotateY(" + currentPosition + "deg)";
@@ -110,12 +109,11 @@ class Home extends React.Component {
         // carouselObject[0].style.oTransform = "rotateY(" + currentPosition + "deg)";
     }
 
-    render() {
+    render () {
         return (
             <div className='home-container'>
                 <h1 className='header'>{this.props.user.name}</h1>
                 <div className='imageContainer'>
-                {/*
                     <div className='carouselContainer'>
                     {this.props.user.images.map((image, index, front) => {
                         return (
@@ -136,15 +134,15 @@ class Home extends React.Component {
                         )
                     })}       
                     </div>
-                    */}
-                    <i className="moveRight"
-                        onClick={this.rotateImages}></i>
-                    <i className="moveLeft"
-                        onClick={this.rotateImages}></i>
+                    <i className='moveRight'
+                        onClick={this.rotateImages} />
+                    <i className='moveLeft'
+                        onClick={this.rotateImages} />
                 </div>
             </div>
-        )
+        );
     }
 }
 
 module.exports = Home;
+*/

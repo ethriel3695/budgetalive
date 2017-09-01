@@ -1,4 +1,4 @@
-body {
+/*body {
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
     background-color: #24b200;
 }
@@ -324,4 +324,4 @@ and (orientation: landscape) {
     .pic5 {
         transform: rotateY(300deg) translateZ(250px);
     }
-}
+}*/

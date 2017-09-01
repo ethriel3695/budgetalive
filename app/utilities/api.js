@@ -10,21 +10,17 @@ var objectURL;
 
 module.exports = {
     fetchPictaculousObject: function (image) {
-        
-        
-        fetch(image).then(function(response) {
+        fetch(image).then(function (response) {
             return response.blob();
-        }).then(function(myBlob) {
+        }).then(function (myBlob) {
             objectURL = URL.createObjectURL(myBlob);
             var encodedURI = window.encodeURI = ('//pictaculous.com/api/1.0/assets/imageAlex01.jpg');
             console.log(encodedURI);
             return axios.post(encodedURI)
-                .then(function(response) {
+                .then(function (response) {
                     return response;
                 });
-        })
+        });
         console.log(objectURL);
-        
-        
-    }
+    },
 };
