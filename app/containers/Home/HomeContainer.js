@@ -1,12 +1,12 @@
 import React from 'react';
-import { Home } from 'components'
+import { Home } from 'components';
 
 class HomeContainer extends React.Component {
-  render () {
-    return (
-      <Home />
-    );
-  }
+    render () {
+        return (
+            <Home />
+        );
+    }
 }
 
-export default HomeContainer
+export default HomeContainer;
