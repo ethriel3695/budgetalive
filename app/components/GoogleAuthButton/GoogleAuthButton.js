@@ -7,10 +7,10 @@ GoogleAuthButton.propTypes = {
     isFetching: PropTypes.bool.isRequired,
 };
 
-export default function GoogleAuthButton (props) {
+export default function GoogleAuthButton ({onAuth, isFetching}) {
     return (
-        <button onClick={props.onAuth} className={button}>
-            {props.isFetching === true
+        <button onClick={onAuth} className={button}>
+            {isFetching === true
                 ? 'Loading'
                 : 'Login with Google'}
         </button>
